@@ -5,10 +5,6 @@ print("\nВсего пассажиров:", len(df))
 
 print("\nСтрок с пустым возрастом:", df['Age'].isna().sum())
 
-print("\nСтатистика (числа):\n", df.describe())
-
-print("\nСтатистика (категории):\n", df.describe(include=['object']))
-
 print("\nМужчин:", (df['Sex'] == 'male').sum())
 
 print("\nКают 1 класса:", (df['Pclass'] == 1).sum())
