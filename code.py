@@ -19,9 +19,9 @@ print("\nСредняя цена билета 1 класса:", df[df['Pclass'] 
 
 print("\nВыживаемость 3 класса:", df[df['Pclass'] == 3]['Survived'].mean())
 
-median_age = df['Age'].median()
-print("\nМедианный возраст:", median_age)
-df['Age'] = df['Age'].fillna(median_age)
+ma = df['Age'].median()
+print("\nМедианный возраст:", ma)
+df['Age'] = df['Age'].fillna(ma)
 
 df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
 print("FamilySize у 888 пассажира:", df.iloc[888]['FamilySize'])
